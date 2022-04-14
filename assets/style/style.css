@@ -5,10 +5,14 @@
 }
 
 .scroll {
-  max-height: 100%;
+  max-height: 108%;
   overflow-y: auto;
 }
 
+.btm-scroll {
+  max-height: 46vh;
+  overflow-y: auto;
+}
 .selected {
   height: 40vh;
   width: 100%
@@ -27,6 +31,6 @@
 }
 
 .team {
-  width: 30%;
+  width: 32%;
   max-height: 10vh;
 }

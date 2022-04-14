@@ -9,7 +9,11 @@ async function _drawPokedex(){
 }
 
 async function _drawActivePokemon(){
-  document.getElementById('active').innerHTML = ProxyState.activePokemon.Template
+  if (!ProxyState.activePokemon) {
+    document.getElementById('active').innerHTML = ''
+  } else {
+    document.getElementById('active').innerHTML = ProxyState.activePokemon.Template
+  }
 }
 
 

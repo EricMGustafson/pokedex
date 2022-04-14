@@ -9,8 +9,8 @@ function _drawPokeTeam(){
 
 export class MyPokeController{
   constructor() {
-    ProxyState.on('pokeTeam', _drawPokeTeam)
     this.getPokeTeam()
+    ProxyState.on('pokeTeam', _drawPokeTeam)
   }
 
   async getPokeTeam(){
@@ -27,4 +27,16 @@ export class MyPokeController{
       console.log('POKEteam GET ERROR', error)
     }
   }
+
+
+
+  async removePokemon(id){
+    try {
+      await myPokeService.removePokemon(id)
+    } catch (error) {
+      console.log('POKE DELETE ERROR', error)
+    }
+  }
+
+
 }

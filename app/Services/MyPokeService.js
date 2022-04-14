@@ -4,6 +4,13 @@ import { Pokemon } from "../Models/Pokemon.js"
 
 
 class MyPokeService {
+  async removePokemon(id) {
+    const res = await sandboxApi.delete('pokemon/' + id)
+    ProxyState.activePokemon = null
+    const index = ProxyState.pokeTeam.findIndex(p => p.id == id)
+    ProxyState.pokeTeam.splice(index, 1)
+    ProxyState.pokeTeam = ProxyState.pokeTeam
+  }
   activeMyPokemon(id) {
     let active = ProxyState.pokeTeam.find(p => p.id == id)
     ProxyState.activePokemon = active

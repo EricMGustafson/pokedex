@@ -25,11 +25,13 @@ export class Pokemon{
       </div>
     </div>`
   }
-
+ 
   get Button() {
-    if (!this.id) {
-      return `<button class="btn btn-info" onclick="app.pokeController.addPokemon('${this.name}')">Add Pokemon</button>`
-      } else { return `<button class="btn btn-info" onclick="app.myPokeController.removePokemon('${this.id}')">Remove Pokemon</button>`}
+    if (this.id.length > 3) {
+      return `<button class="btn btn-info" onclick="app.myPokeController.removePokemon('${this.id}')">Remove Pokemon</button>`
+      } else { 
+        return `<button class="btn btn-info" onclick="app.pokeController.addPokemon('${this.name}')">Add Pokemon</button>`
+      }
     }
 
   get teamTemplate() {

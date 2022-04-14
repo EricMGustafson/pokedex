@@ -12,8 +12,6 @@ class PokeService{
   async activePokemon(pokeName){
     const res = await pokeApi.get('pokemon/' + pokeName)
     ProxyState.activePokemon = new Pokemon(res.data)
-    
-
   }
 }
 
