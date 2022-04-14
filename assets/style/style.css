@@ -1,0 +1,32 @@
+/* BASIC STYLES HERE */
+
+.pokemon-row {
+  height: 81vh;
+}
+
+.scroll {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.selected {
+  height: 40vh;
+  width: 100%
+}
+
+.object-fit {
+  height: 40vh;
+  width: auto;
+  object-fit: cover;
+}
+
+.object-fit-small {
+  height: 10vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.team {
+  width: 30%;
+  max-height: 10vh;
+}
